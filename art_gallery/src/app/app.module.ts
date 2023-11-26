@@ -13,7 +13,7 @@ import { AppComponent } from './app.component';
 import { ApiService } from './api.service';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [],
   imports: [
     BrowserModule,
     CommonModule,
@@ -27,7 +27,7 @@ import { ApiService } from './api.service';
     MatFormFieldModule
   ],
   providers: [ApiService],
-  bootstrap: [AppComponent],
+  bootstrap: [],
 })
 export class AppModule {}
 
