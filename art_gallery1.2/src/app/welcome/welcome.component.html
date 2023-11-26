@@ -1,0 +1,28 @@
+<p>
+    <mat-toolbar>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>{{title}}</span>
+      <span class="example-spacer"></span>
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>favorite</mat-icon>
+      </button>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>share</mat-icon>
+      </button>
+    </mat-toolbar>
+  </p>
+  <mat-card>
+    <h1 id="title">Welcome to Art Gallery</h1>
+  </mat-card>
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+          <mat-label>Search Artwork</mat-label>
+          <input #queryInput matInput placeholder="Ex. Van Gogh">
+    </mat-form-field>
+  </form>
+  <button mat-raised-button color="warn" (click)="searchApi(queryInput.value)">Search</button>
+<p>{{paint}}</p>
+<p>{{artist}}</p>
+<img src="https://www.artic.edu/iiif/2/{{image_id}}/full/843,/0/default.jpg" alt="{{paint}}">
