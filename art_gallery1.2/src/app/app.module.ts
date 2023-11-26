@@ -1,5 +1,8 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';  // Add this line if not already present
 import { AppComponent } from './app.component';
@@ -13,9 +16,14 @@ import { MatInputModule } from '@angular/material/input';
 import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
-  declarations: [AppComponent,WelcomeComponent],
+  declarations: [
+    AppComponent,
+    WelcomeComponent
+  ],
   imports: [
-    BrowserModule, 
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
     HttpClientModule, 
     FormsModule,
     CommonModule,
@@ -24,11 +32,9 @@ import { WelcomeComponent } from './welcome/welcome.component';
     MatToolbarModule,
     MatCardModule,
     MatInputModule,
-    MatIconModule],  // Include FormsModule here
+    MatIconModule
+  ],
   providers: [],
-  bootstrap: [AppComponent],
-  
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
-
-
+export class AppModule { }
