@@ -1,17 +1,29 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
-import { MatToolbarModule } from '@angular/material/toolbar'
-import {MatIconModule} from '@angular/material/icon'
-import { MatButtonModule } from '@angular/material/button'
+import { ApiService } from './api.service';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, RouterOutlet, MatToolbarModule, MatIconModule, MatButtonModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'art_gallery';
+  title = 'Art Gallery';
+  query: string = '';
+  content: any;
+  paint: string = '';
+
+  constructor(private service: ApiService) {}
+
+  searchApi() {
+    this.service.getArt(this.query).subscribe(
+      (data) => {
+        this.content = data;
+        this.paint = this.content.data[0].title;
+      },
+      (error) => {
+        console.error('Error fetching data:', error);
+      }
+    );
+  }
 }
+
