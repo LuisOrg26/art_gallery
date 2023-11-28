@@ -13,12 +13,17 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
+import {MatGridListModule} from '@angular/material/grid-list';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { ArtCardComponent } from './art-card/art-card.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    ArtCardComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +37,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
     MatToolbarModule,
     MatCardModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
