@@ -1,0 +1,22 @@
+mat-toolbar{
+    background-color: brown;
+    color: beige;
+    box-shadow: 0px 0px 20px black;
+}
+footer{
+    background-color: brown;
+    color: beige;
+    width: 100%;
+    margin-top: 40px;
+    height:auto;
+    text-align:center;
+    font-size: 15px;
+    align-items: end;
+    padding: 30px;
+    
+}
+a {
+    text-decoration: none;
+    color: inherit; 
+    cursor: pointer; 
+  }

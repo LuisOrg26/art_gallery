@@ -1,0 +1,28 @@
+<mat-card>
+    <mat-form-field class="textbox">
+        <mat-label>Search Artwork</mat-label>
+        <input #input matInput placeholder="Ex. Van Gogh">
+    </mat-form-field>
+    <button mat-raised-button class="search" (click)="Search(input.value)">Search</button>
+    <p>Resultados de {{query}}</p>
+    <hr>
+    @if(show == true){
+        @defer{
+        <div class="content">
+        @for (component of content.data; track component.id){
+            <a (click)="searchPaint(component.id)">
+            <mat-card class="paint">
+            <img src="{{component.image}}" alt="{{component.title}}" class="img">
+            <p class="title">{{component.title}}</p>
+            <p class="artist">{{component.artistName}}</p>
+            </mat-card>
+            </a>
+        }
+        </div>
+        }@loading {
+            ta cargando
+        }
+    }@else {
+        No se han encontrado resultados
+    }
+</mat-card>

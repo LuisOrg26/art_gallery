@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
@@ -13,12 +12,22 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
+import {MatGridListModule} from '@angular/material/grid-list';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { provideProtractorTestingSupport } from '@angular/platform-browser';
+import { provideRouter } from '@angular/router';
+import routeConfig from './routes';
+import { ArtComponent } from './art/art.component';
+import { ArtCardComponent } from './art-card/art-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    AboutUsComponent,
+    ArtComponent,
+    ArtCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,9 +41,10 @@ import { WelcomeComponent } from './welcome/welcome.component';
     MatToolbarModule,
     MatCardModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    MatGridListModule
   ],
-  providers: [],
+  providers: [provideProtractorTestingSupport(), provideRouter(routeConfig)],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
