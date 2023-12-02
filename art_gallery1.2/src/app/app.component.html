@@ -1,9 +1,9 @@
 
   <mat-toolbar>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <button mat-icon-button class="example-icon" [routerLink]="['/about-us']">
       <mat-icon>menu</mat-icon>
     </button>
-    <span>Coffee & Canvas Retreat</span>
+    <a [routerLink]="['']"><span>Coffee & Canvas Retreat</span></a>
     <span class="example-spacer"></span>
     <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
       <mat-icon>favorite</mat-icon>
@@ -13,14 +13,8 @@
     </button>
   </mat-toolbar>
 <div id="background">
-    <app-welcome></app-welcome>
-    <hr>
-    <app-about-us></app-about-us>
+    <router-outlet></router-outlet>
     <footer>
       Luis Javier Origel Gonzalez | Universidad La Salle Bajio
     </footer>
 </div>
-
-
-
-<router-outlet></router-outlet>

@@ -1,0 +1,49 @@
+.textbox{
+    width: 200px;
+  }
+  .search{
+    width: 50px;
+    background-color: brown;
+    color: beige;
+  }
+  mat-card{
+    display:flex;
+  }
+  .content{
+    min-width: 0;
+    flex-wrap: wrap;
+    columns: 5;
+    column-gap: 15px;
+  }
+  .title{
+    font-size: 20px;
+    color: brown;
+    padding:5px;
+  }
+  .img{
+    width:230px;
+    height: auto;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  .paint{
+    width: 230px;
+    height: fit-content;
+    border-color: grey;
+    border-radius: 15px;
+    margin:15px;
+    position:relative;
+    break-inside: avoid;
+    transition: all ease-in .15s;
+    &:hover{
+        scale: 1.05;
+        box-shadow: 3px 3px 3px 3px black;
+        transition-duration: .3s;
+    }
+  }
+
+  .artist{
+    font-size: 15px;
+    color: rgb(211, 208, 25);
+    padding:5px;
+  }

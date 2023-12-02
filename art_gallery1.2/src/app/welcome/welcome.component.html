@@ -1,20 +1,18 @@
+
   <mat-grid-list cols="1" rowHeight="150px" >
     <mat-grid-tile>
       <h1 id="title">Coffee & Canvas Gallery</h1>
     </mat-grid-tile>
     
     <mat-grid-tile>
-  <form class="example-form">
-    <mat-form-field class="form">
+  <form class="input">
+    <mat-form-field class="input2">
           <mat-label>Search Artwork</mat-label>
           <input #queryInput matInput placeholder="Ex. Van Gogh" class="input">
     </mat-form-field>
   </form>
 </mat-grid-tile>
 <mat-grid-tile>
-  <button mat-raised-button color="warn" class="search" (click)="searchApi(queryInput.value)">Search</button>
-  <p>{{paint}}</p>
-  <p>{{artist}}</p>
-  <img src="{{image}}" alt="{{paint}}">
+  <button mat-raised-button class="search" (click)="searchApi(queryInput.value)">Search</button>
 </mat-grid-tile>
 </mat-grid-list>
