@@ -18,9 +18,10 @@ export class ArtComponent implements OnInit {
   show: any;
   format:string='Portrait'
   constructor(private service: ApiService, private route: ActivatedRoute, private router: Router) {}
-  Search(content: string){
-    this.router.navigate(['/search'],{queryParams: {query: encodeURI(content)}});
-    this.service.getArt(content,this.format).subscribe(
+  Search(text: string){
+    this.router.navigate(['/search'],{queryParams: {query: encodeURI(text)}});
+    this.query = text
+    this.service.getArt(text,this.format).subscribe(
       (data) => {
         this.content = data;
         if (this.content.data[0]) {
@@ -30,8 +31,6 @@ export class ArtComponent implements OnInit {
         }
       }
     );
-    this.query = this.route.snapshot.queryParamMap.get('query')
-    this.query = decodeURI(this.query)
   }
   searchPaint(id:string){
     this.router.navigate(['/paint'],{queryParams: {query: encodeURI(id)}});

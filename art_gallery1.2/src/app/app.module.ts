@@ -20,6 +20,8 @@ import { provideRouter } from '@angular/router';
 import routeConfig from './routes';
 import { ArtComponent } from './art/art.component';
 import { ArtCardComponent } from './art-card/art-card.component';
+import { BuyComponent } from './buy/buy.component';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,7 @@ import { ArtCardComponent } from './art-card/art-card.component';
     AboutUsComponent,
     ArtComponent,
     ArtCardComponent,
+    BuyComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,8 @@ import { ArtCardComponent } from './art-card/art-card.component';
     MatCardModule,
     MatInputModule,
     MatIconModule,
-    MatGridListModule
+    MatGridListModule,
+    MatSelectModule
   ],
   providers: [provideProtractorTestingSupport(), provideRouter(routeConfig)],
   bootstrap: [AppComponent]

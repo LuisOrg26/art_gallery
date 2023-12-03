@@ -1,0 +1,58 @@
+.img{
+    width: auto;
+    height: 450px;
+
+}
+.content{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 45px;
+    padding: 20px;
+    border-radius: 15px;
+    border: 10px solid rgb(180, 104, 104);
+    position: relative;
+
+}
+.title{
+    font-size: 50px;
+    font-style: oblique;
+    font-family: Roboto;
+    color: brown;
+    margin-bottom: 10px;
+    line-height: 40px;
+}
+.artist{
+    font-size: 30px;
+    font-style: italic;
+}
+.styles{
+    text-decoration: underline;
+    text-decoration-color: brown;
+    font-style: italic;
+
+}
+.description{
+    font-family: Roboto;
+    font-size: small;
+
+}
+.content div{
+    padding:20px;
+    text-align: right;
+    align-items: center;
+    
+}
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.ndes{
+    align-items: center;
+    bottom: 0;
+    top:0;
+    position: sticky;
+    margin: auto;
+}

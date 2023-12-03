@@ -7,13 +7,15 @@ footer{
     background-color: brown;
     color: beige;
     width: 100%;
-    margin-top: 40px;
-    height:auto;
+    height:5px;
     text-align:center;
     font-size: 15px;
-    align-items: end;
-    padding: 30px;
-    
+    padding: 10px;
+    padding-bottom: 15px;
+    position: fixed;
+    bottom: 0;
+    opacity: 0.4;
+
 }
 a {
     text-decoration: none;

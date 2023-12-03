@@ -49,3 +49,9 @@ img {
         scale: 1;
     }
 }
+.title{
+    font-family: Kaushan Script ;
+    text-align: center;
+    font-size: 5vw;
+    margin-top: 50px;
+}
