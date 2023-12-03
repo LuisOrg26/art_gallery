@@ -4,6 +4,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ArtComponent } from './art/art.component';
 import { ArtCardComponent } from './art-card/art-card.component';
 
+
 const routeConfig: Routes = [
     {
       path: '',

@@ -1,13 +1,14 @@
-<mat-card>
-    <mat-form-field class="textbox">
-        <mat-label>Search Artwork</mat-label>
-        <input #input matInput placeholder="Ex. Van Gogh">
-    </mat-form-field>
+<mat-card class="header">
+    <div class="input-field">
+        <input #input  placeholder="Ex. Van Gogh">
+    </div>
+
     <button mat-raised-button class="search" (click)="Search(input.value)">Search</button>
-    <p>Resultados de {{query}}</p>
+    <p class="query">Results of: {{query}}</p>
     <hr>
+</mat-card>
     @if(show == true){
-        @defer{
+        @defer(on timer(300)){
         <div class="content">
         @for (component of content.data; track component.id){
             <a (click)="searchPaint(component.id)">
@@ -20,9 +21,14 @@
         }
         </div>
         }@loading {
-            ta cargando
+            <div class="loader">
+                </div>
         }
     }@else {
-        No se han encontrado resultados
+        <div class="space">
+        <div class="loader">
+        </div>
+        </div>
     }
-</mat-card>
+
+    
